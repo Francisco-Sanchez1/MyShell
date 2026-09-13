@@ -1,1 +1,15 @@
-# lslslsls
+piping first then redirect
+- file file descriptor
+0,1,2 stdin, stdout, stderr
+switch around mappings in redirects 
+create will create or open file
+before redirect and after redirect 
+strcmp - string compare
+change input and output and then re run execute 
+pipe will be 2 read write and created with integer buffer and then create a fork and if child prcoess set out to 
+pipe out have to close entire pipe at end within child prcoess
+
+for pipes check on the redirection string
+
+
+Signals
