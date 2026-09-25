@@ -131,6 +131,11 @@ int main(){
         int input_fd = -1; //i file directory number 
         int output_fd = -1; //o file directory number
         input = readline("# ");
+        if (input == NULL) {
+            //ctrl-d sends an end of file 
+            printf("\n");
+            exit(0);
+        }
         char *original_input = strdup(input); // make a copy of the original input for job management
 
         for (int i = job_count - 1; i >= 0; i--){
@@ -459,8 +464,6 @@ int main(){
                     printf("[%d] %d\n", jobs[job_count-1].job_id, cpid_3);
                     background_bool = false; // reset for next command
                     
-                    
-                
                 }
                 else{
                     tcsetpgrp(STDIN_FILENO, cpid_3);
